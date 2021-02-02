@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .niki {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .bouton {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 14vh;
+        }
+        .deco {
+            border : none;
+            padding : 0.5rem;
+            background-color:rgb(0, 0, 0) ;
+            color : #fff;
+            border-radius: 5rem;
+            font-family:cursive;
+            transition: transform .3s ease-out;
+        }
+        .deco:hover{
+            background:url('https://images5.alphacoders.com/112/1123549.jpg') ;
+            transform:translate(0,-5px);
+            outline:0;
+        }
+        .deco:focus{
+            outline:0
+        }
+    </style>
+</head>
+<body>
+    <div class ="bouton">
+        <button onclick="moi()" class = "deco">
+            change img 
+        </button>
+    </div>
+
+    <div class="niki">
+        <img id="randomImage" src="/image/1.jpg">
+    </div>
+
+    <script>
+        const element = document.getElementById('randomImage');
+        
+        element.height = window.screen.height / 2;
+        
+        let max = 27;
+
+        function moi() {
+
+            element.src = `/image/${Math.floor(Math.random() * max) + 1}.jpg`;
+        };
+    </script>
+</body>
+</html>
