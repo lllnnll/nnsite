@@ -15,14 +15,6 @@ app.get('/', (req, res) => {
 
 const server = http.createServer(app);
 server.listen(port, '0.0.0.0');
-server.on('listening', () => console.log(`🚀 Server listening at http://localhost:${port}`));
-
-
-
-
-
-
-
-
+server.on('listening', () => console.log(`❤ Server listening at http://localhost:${port}`));
 
 
